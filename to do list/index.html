@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Hey Ashik! You've got <span id="task-count">0</span> tasks today</h1>
+            <div class="header-right">
+                <input type="text" placeholder="Search something..." id="search">
+                <div id="clock"></div>
+            </div>
+        </header>
+        <main>
+            <section class="tasks">
+                <h2>My tasks</h2>
+                <div class="add-task-container">
+                    <input type="text" id="todo-input" placeholder="Task name">
+                    <input type="date" id="todo-date">
+                    <input type="time" id="todo-time">
+                    <button id="add-todo-button">Add task</button>
+                </div>
+                <ul id="todo-list"></ul>
+            </section>
+            <section class="pending-tasks">
+                <h2>Pending Tasks</h2>
+                <ul id="pending-tasks-list"></ul>
+            </section>
+            <section class="overview">
+                <h2>Overview</h2>
+                <div class="working-progress">
+                    <p>Working Progress</p>
+                    <div class="progress-circle" id="progress-circle">0%</div>
+                </div>
+                <div class="completed-tasks">
+                    <p>Completed Tasks</p>
+                    <div class="chart" id="completed-tasks-chart">
+                        <div class="bar" style="height: 0%;" id="bar-1"></div>
+                        <div class="bar" style="height: 0%;" id="bar-2"></div>
+                        <div class="bar" style="height: 0%;" id="bar-3"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="schedule">
+                <h2>Today's Schedule</h2>
+                <div class="calendar">
+                    <p id="current-date"></p>
+                    <ul id="schedule-list"></ul>
+                </div>
+                <div class="project-time-tracker">
+                    <p>Project Time Tracker</p>
+                    <div class="time" id="project-time-tracker">00:00:00</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
